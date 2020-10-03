@@ -1,5 +1,19 @@
+# Run following commands to install Jenkins
+# -------------------------------------------------------------------------------------------------------
 wget -q -O - https://pkg.jenkins.io/debian-stable/jenkins.io.key | sudo apt-key add -
 echo "deb https://pkg.jenkins.io/debian-stable binary/" > /etc/apt/sources.list.d/jenkins.list
 apt-get update
 apt install openjdk-8-jdk
 apt-get install jenkins
+service jenkins status
+
+# Initial steps to start Jenkins 
+# -------------------------------------------------------------------------------------------------------
+Type doamin_name:8080 in browser
+It will ask for Administrator password.
+Run command 
+cat /var/lib/jenkins/secrets/initialAdminPassword
+
+Copy password displayed and paste it in browser window.
+Select suggested plugins
+Create admin user
